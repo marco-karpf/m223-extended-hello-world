@@ -17,4 +17,15 @@ class GreetingResourceTest {
                 .body(is("Hello World!"));
     }
 
+    @Test
+    void addNumbers() {
+        given()
+                .when().get("/hello/1/2")
+                .then()
+                .statusCode(200)
+                .body(is("3"));
+    }
+
+
+
 }
